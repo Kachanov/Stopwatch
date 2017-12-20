@@ -1,0 +1,53 @@
+.stopwatch{
+    width: 500px;
+    height: 200px;
+    background-color: #2f2f2f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stopwatch > .display {
+    width: 450px;
+    height: 50px;
+    background-color: azure;
+    font-size: 24pt;
+    border: 2px solid black;
+    text-align: center;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.stopwatch > .start-button{
+    width: 150px;
+    height: 50px;
+    background-color: greenyellow;
+    text-align: center;
+    font-size: 24pt;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.stopwatch > .stop-button{
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    text-align: center;
+    font-size: 24pt;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.stopwatch > .clear-button{
+    width: 150px;
+    height: 50px;
+    background-color: yellow;
+    text-align: center;
+    font-size: 24pt;
+    border: 2px solid black;
+    cursor: pointer;
+}
