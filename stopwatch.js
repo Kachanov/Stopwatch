@@ -6,6 +6,7 @@ class Stopwatch{
         this.minutes = minutes;
     }
 
+
     getTime(){
         console.log(this.minutes, this.seconds, this.milliseconds);
         seconds.innerHTML = this.seconds;
@@ -27,17 +28,34 @@ class Stopwatch{
         }, 0);
     }
 
+
+    clear(){
+        this.milliseconds = 0;
+        this.seconds = 0;
+        this.minutes = 0;
+    }
+
+
+    stop(){
+
+    }
+
 }
 
 var stopwatch = new Stopwatch(0, 0, 0);
 
 var startButton = document.getElementById("start-button");
+var stopButton = document.getElementById("stop-button");
+var clearButton = document.getElementById("clear-button");
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
+
+
+startButton.onclick = () => stopwatch.start();
+stopButton.onclick = () => stopwatch.stop();
+clearButton.onclick = () => stopwatch.clear();
 
 /*
 startButton.onclick = function (event) {
     stopwatch.start();
 };*/
-
-startButton.onclick = () => stopwatch.start();
