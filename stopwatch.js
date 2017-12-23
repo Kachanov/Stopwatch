@@ -18,12 +18,17 @@ class Stopwatch{
         setTimeout(function go() {
             ++stopwatch.seconds;
             stopwatch.getTime();
+
+            if(stopwatch.seconds < 10){
+                seconds.innerHTML = "0" + stopwatch.seconds;
+            }
+
             timerID = setTimeout(go, 1000);
 
             if(stopwatch.seconds === 60){
                 ++stopwatch.minutes;
                 minutes.innerHTML = stopwatch.minutes;
-                stopwatch.seconds = 0;
+                stopwatch.seconds = "0" + 0;
                 seconds.innerHTML = stopwatch.seconds;
             }
         }, 0);
