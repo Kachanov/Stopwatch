@@ -10,7 +10,10 @@ class Stopwatch{
     getTime() {
         console.log(this.minutes, this.seconds);
         seconds.innerHTML = this.seconds;
-        minutes.innerHTML = this.minutes
+        minutes.innerHTML = this.minutes;
+        if(stopwatch.seconds < 10){
+            seconds.innerHTML = "0" + stopwatch.seconds;
+        }
     }
 
 
@@ -19,9 +22,7 @@ class Stopwatch{
             ++stopwatch.seconds;
             stopwatch.getTime();
 
-            if(stopwatch.seconds < 10){
-                seconds.innerHTML = "0" + stopwatch.seconds;
-            }
+
 
             timerID = setTimeout(go, 1000);
 
