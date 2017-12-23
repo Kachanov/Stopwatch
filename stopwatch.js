@@ -25,7 +25,7 @@ class Stopwatch{
                 stopwatch.seconds = 0;
                 seconds.innerHTML = stopwatch.seconds;
             }
-        }, 1000);
+        }, 0);
     }
 
 
