@@ -1,3 +1,4 @@
+var timerID;
 class Stopwatch{
 
     constructor(minutes, seconds){
@@ -17,7 +18,7 @@ class Stopwatch{
         setTimeout(function go() {
             ++stopwatch.seconds;
             stopwatch.getTime();
-            setTimeout(go, 1000);
+            timerID = setTimeout(go, 1000);
 
             if(stopwatch.seconds === 60){
                 ++stopwatch.minutes;
@@ -37,7 +38,7 @@ class Stopwatch{
 
 
     stop(){
-
+        clearTimeout(timerID);
     }
 
 }
