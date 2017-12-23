@@ -24,11 +24,8 @@ class Stopwatch{
                 stopwatch.seconds = 0;
                 seconds.innerHTML = "0";
             }
-        }, 1000);
-
+        }, 0);
     }
-
-
 
 }
 
@@ -38,12 +35,9 @@ var startButton = document.getElementById("start-button");
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
 
+/*
 startButton.onclick = function (event) {
     stopwatch.start();
-};
+};*/
 
-
-
-
-
-
+startButton.onclick = () => stopwatch.start();
