@@ -18,21 +18,24 @@ class Stopwatch{
 
 
     start(){
-        setTimeout(function go() {
-            ++stopwatch.seconds;
-            stopwatch.getTime();
+        var self = this;
+        function go() {
+            ++self.seconds;
+            self.getTime();
 
 
 
             timerID = setTimeout(go, 1000);
 
-            if(stopwatch.seconds === 60){
-                ++stopwatch.minutes;
-                minutes.innerHTML = stopwatch.minutes;
-                stopwatch.seconds = "0" + 0;
-                seconds.innerHTML = stopwatch.seconds;
+            if(self.seconds === 60){
+                ++self.minutes;
+                minutes.innerHTML = self.minutes;
+                self.seconds = "0" + 0;
+                seconds.innerHTML = self.seconds;
             }
-        }, 0);
+        }
+
+        go();
     }
 
 
@@ -45,6 +48,10 @@ class Stopwatch{
 
     stop(){
         clearTimeout(timerID);
+    }
+
+    createStopwatch(){
+        return new Stopwatch(0, 0);
     }
 
 }
