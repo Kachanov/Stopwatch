@@ -22,7 +22,7 @@
     justify-content: center;
 }
 
-.stopwatch > .start-button{
+.stopwatch > .start-stop-button{
     width: 150px;
     height: 50px;
     background-color: greenyellow;
@@ -31,17 +31,11 @@
     border: 2px solid black;
     cursor: pointer;
     user-select: none;
+    margin-right: 10px;
 }
 
-.stopwatch > .stop-button{
-    width: 150px;
-    height: 50px;
+.start-stop-button.isStart{
     background-color: red;
-    text-align: center;
-    font-size: 24pt;
-    border: 2px solid black;
-    cursor: pointer;
-    user-select: none;
 }
 
 .stopwatch > .clear-button{

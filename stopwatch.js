@@ -52,15 +52,24 @@ class Stopwatch{
 
 var stopwatch = new Stopwatch(0, 0);
 
-var startButton = document.getElementById("start-button");
-var stopButton = document.getElementById("stop-button");
+var startStopButton = document.getElementById("start-stop-button");
 var clearButton = document.getElementById("clear-button");
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
 
+var isStart = false;
+startStopButton.onclick = () => {
+    if(isStart === false) {
+        stopwatch.start();
+        isStart = true;
+        startStopButton.classList.add("isStart");
+    }else{
+        stopwatch.stop();
+        isStart = false;
+        startStopButton.classList.remove("isStart");
+    }
+};
 
-startButton.onclick = () => stopwatch.start();
-stopButton.onclick = () => stopwatch.stop();
 clearButton.onclick = () => stopwatch.clear();
 
 /*startButton.onclick = function () {
