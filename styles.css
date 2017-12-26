@@ -30,6 +30,7 @@
     font-size: 24pt;
     border: 2px solid black;
     cursor: pointer;
+    user-select: none;
 }
 
 .stopwatch > .stop-button{
@@ -40,6 +41,7 @@
     font-size: 24pt;
     border: 2px solid black;
     cursor: pointer;
+    user-select: none;
 }
 
 .stopwatch > .clear-button{
@@ -50,4 +52,5 @@
     font-size: 24pt;
     border: 2px solid black;
     cursor: pointer;
+    user-select: none;
 }

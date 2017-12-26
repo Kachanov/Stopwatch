@@ -23,8 +23,6 @@ class Stopwatch{
             ++this.seconds;
             this.getTime();
 
-
-
             timerID = setTimeout(go, 1000);
 
             if(this.seconds === 60){
@@ -36,6 +34,7 @@ class Stopwatch{
         };
 
         go();
+
     };
 
 
