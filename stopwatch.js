@@ -11,6 +11,7 @@ class Stopwatch{
         console.log(this.minutes, this.seconds);
         seconds.innerHTML = this.seconds;
         minutes.innerHTML = this.minutes;
+
         if(this.seconds < 10){
             seconds.innerHTML = "0" + this.seconds;
         }
@@ -23,8 +24,6 @@ class Stopwatch{
             ++this.seconds;
             this.getTime();
 
-            timerID = setTimeout(go, 1000);
-
             if(this.seconds === 60){
                 ++this.minutes;
                 minutes.innerHTML = this.minutes;
@@ -33,8 +32,8 @@ class Stopwatch{
             }
         };
 
+        timerID = setInterval(go, 1000);
         go();
-
     };
 
 
@@ -46,7 +45,7 @@ class Stopwatch{
 
 
     stop(){
-        clearTimeout(timerID);
+        clearInterval(timerID);
     }
 
 }
