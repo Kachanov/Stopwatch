@@ -75,7 +75,13 @@ startStopButton.onclick = () => {
 };
 
 clearButton.onclick = () => stopwatch.clear();
-lapButton.onclick = () => alert("lap");
+
+var laps = new Array();
+lapButton.onclick = () => {
+    laps.push(stopwatch.minutes + ":" + stopwatch.seconds);
+    console.log(laps);
+};
+
 
 /*startButton.onclick = function () {
     stopwatch.start();
