@@ -11,32 +11,32 @@ class Stopwatch{
         console.log(this.minutes, this.seconds);
         seconds.innerHTML = this.seconds;
         minutes.innerHTML = this.minutes;
-        if(stopwatch.seconds < 10){
-            seconds.innerHTML = "0" + stopwatch.seconds;
+        if(this.seconds < 10){
+            seconds.innerHTML = "0" + this.seconds;
         }
     }
 
 
     start(){
-        var self = this;
-        function go() {
-            ++self.seconds;
-            self.getTime();
+        //var self = this;
+        const go = () => {
+            ++this.seconds;
+            this.getTime();
 
 
 
             timerID = setTimeout(go, 1000);
 
-            if(self.seconds === 60){
-                ++self.minutes;
-                minutes.innerHTML = self.minutes;
-                self.seconds = "0" + 0;
-                seconds.innerHTML = self.seconds;
+            if(this.seconds === 60){
+                ++this.minutes;
+                minutes.innerHTML = this.minutes;
+                this.seconds = "0" + 0;
+                seconds.innerHTML = this.seconds;
             }
-        }
+        };
 
         go();
-    }
+    };
 
 
     clear(){
@@ -48,10 +48,6 @@ class Stopwatch{
 
     stop(){
         clearTimeout(timerID);
-    }
-
-    createStopwatch(){
-        return new Stopwatch(0, 0);
     }
 
 }
