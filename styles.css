@@ -84,4 +84,15 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    z-index: 1;
+}
+
+.arrow{
+    position: absolute;
+    margin-top: 60px;
+}
+
+.animated{
+    transform: rotate(6deg);
+    transition-duration: 1s;
 }
