@@ -56,6 +56,8 @@ var startStopButton = document.getElementById("start-stop-button");
 var clearButton = document.getElementById("clear-button");
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
+var lapButton = document.getElementById("lap-button");
+
 
 var isStart = false;
 startStopButton.onclick = () => {
@@ -63,14 +65,17 @@ startStopButton.onclick = () => {
         stopwatch.start();
         isStart = true;
         startStopButton.classList.add("isStart");
+        startStopButton.innerHTML = "Stop";
     }else{
         stopwatch.stop();
         isStart = false;
         startStopButton.classList.remove("isStart");
+        startStopButton.innerHTML = "Start";
     }
 };
 
 clearButton.onclick = () => stopwatch.clear();
+lapButton.onclick = () => alert("lap");
 
 /*startButton.onclick = function () {
     stopwatch.start();

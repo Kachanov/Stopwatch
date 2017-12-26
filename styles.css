@@ -53,7 +53,7 @@
 }
 
 .start-stop-button.isStart{
-    background-color: red;
+    background-color: #ff5956;
 }
 
 .clear-button{
@@ -65,4 +65,16 @@
     border: 2px solid black;
     cursor: pointer;
     user-select: none;
+}
+
+.lap-button{
+    width: 150px;
+    height: 50px;
+    background-color: #6061ff;
+    text-align: center;
+    font-size: 24pt;
+    border: 2px solid black;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 10px;
 }
