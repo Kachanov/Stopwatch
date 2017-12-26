@@ -1,14 +1,18 @@
 .stopwatch{
-    width: 500px;
-    height: 200px;
+    width: 600px;
+    height: 600px;
     background-color: #2f2f2f;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     flex-wrap: wrap;
 }
 
-.stopwatch > .display {
+.time{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     width: 450px;
     height: 50px;
     background-color: azure;
@@ -16,13 +20,23 @@
     border: 2px solid black;
     text-align: center;
     margin-top: 20px;
+}
 
+.navigation{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
-.stopwatch > .start-stop-button{
+.display{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.start-stop-button{
     width: 150px;
     height: 50px;
     background-color: greenyellow;
@@ -32,13 +46,17 @@
     cursor: pointer;
     user-select: none;
     margin-right: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .start-stop-button.isStart{
     background-color: red;
 }
 
-.stopwatch > .clear-button{
+.clear-button{
     width: 150px;
     height: 50px;
     background-color: yellow;
