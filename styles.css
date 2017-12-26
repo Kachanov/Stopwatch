@@ -4,9 +4,9 @@
     justify-content: flex-end;
     flex-wrap: wrap;
 
-    width: 600px;
-    height: 600px;
-    background-color: #2f2f2f;
+    width: 800px;
+    height: 450px;
+    background-color: #dedede;
 }
 
 .time{
@@ -78,4 +78,10 @@
     cursor: pointer;
     user-select: none;
     margin-left: 10px;
+}
+
+.clock_face{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
