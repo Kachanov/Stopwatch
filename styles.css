@@ -87,12 +87,7 @@
     z-index: 1;
 }
 
-.arrow{
+.seconds-arrow{
     position: absolute;
-    margin-top: 60px;
-}
-
-.animated{
-    transform: rotate(6deg);
-    transition-duration: 1s;
+    margin-top: 72px;
 }

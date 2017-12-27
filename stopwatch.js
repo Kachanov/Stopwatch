@@ -19,10 +19,11 @@ class Stopwatch{
 
 
     start(){
-        //var self = this;
         const go = () => {
             ++this.seconds;
             this.getTime();
+            secondsArrow.style.transform = "rotate("+ degree +"deg)";
+            degree = degree + 6;
 
             if(this.seconds === 60){
                 ++this.minutes;
@@ -57,10 +58,18 @@ var clearButton = document.getElementById("clear-button");
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
 var lapButton = document.getElementById("lap-button");
+var secondsArrow = document.getElementById("seconds-arrow");
 
 
 var isStart = false;
+var degree = 6;
 startStopButton.onclick = () => {
+    /*setInterval(function () {
+        arrow.style.transform = "rotate("+ degree +"deg)";
+        degree = degree + 6;
+    }, 1000);*/
+
+
     if(isStart === false) {
         stopwatch.start();
         isStart = true;
