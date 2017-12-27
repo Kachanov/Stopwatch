@@ -20,21 +20,20 @@ class Stopwatch{
 
     start(){
         const go = () => {
-            ++this.seconds;
+            currentTime = new Date();
+            var newDate = new Date(currentTime - startTime);
+            this.seconds = newDate.getSeconds();
+            this.minutes = newDate.getMinutes();
             this.getTime();
+
             this.rotateSecondsArrow();
+            this.rotateMinutesArrow();
 
-            if(this.seconds === 60){
-                ++this.minutes;
-                this.rotateMinutesArrow();
+            this.getTime();
 
-                minutes.innerHTML = this.minutes;
-                this.seconds = "0" + 0;
-                seconds.innerHTML = this.seconds;
-            }
         };
 
-        timerID = setInterval(go, 100);
+        timerID = setInterval(go, 1000);
         go();
     };
 
@@ -60,7 +59,6 @@ class Stopwatch{
 
 
     clearSecondsArrow(){
-        degree = 0;
         this.rotateSecondsArrow();
     }
 
@@ -70,40 +68,4 @@ class Stopwatch{
 
 }
 
-var stopwatch = new Stopwatch(0, 0);
-
-var startPauseButton = document.getElementById("start-pause-button");
-var stopButton = document.getElementById("stop-button");
-var minutes = document.getElementById("minutes");
-var seconds = document.getElementById("seconds");
-var lapButton = document.getElementById("lap-button");
-var secondsArrow = document.getElementById("seconds-arrow");
-var minutesArrow = document.getElementById("minutes-arrow");
-
-
-var isStart = false;
-var degree = 0;
-
-startPauseButton.onclick = () => {
-    if(isStart === false) {
-        stopwatch.start();
-        isStart = true;
-        startPauseButton.classList.add("isStart");
-        startPauseButton.innerHTML = "Pause";
-    }else{
-        stopwatch.stop();
-        isStart = false;
-        startPauseButton.classList.remove("isStart");
-        startPauseButton.innerHTML = "Start";
-    }
-};
-
-stopButton.onclick = () => stopwatch.clear();
-
-var laps = new Array();
-lapButton.onclick = () => {
-    laps.push(stopwatch.minutes + ":" + stopwatch.seconds);
-    console.log(laps);
-    this.rotateMinutesArrow();
-};
-
+var stopwatch = new Stopwatch();
