@@ -55,7 +55,6 @@ class Stopwatch{
 
 
     rotateSecondsArrow(){
-        //degree = degree + 6;
         secondsArrow.style.transform = "rotate(" + this.seconds * 6 + "deg)";
     }
 
@@ -69,15 +68,12 @@ class Stopwatch{
         minutesArrow.style.transform = "rotate(" + this.minutes * 6 + "deg)";
     }
 
-    clearMinutesArrow(){
-
-    }
 }
 
 var stopwatch = new Stopwatch(0, 0);
 
-var startStopButton = document.getElementById("start-stop-button");
-var clearButton = document.getElementById("clear-button");
+var startPauseButton = document.getElementById("start-pause-button");
+var stopButton = document.getElementById("stop-button");
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
 var lapButton = document.getElementById("lap-button");
@@ -88,21 +84,21 @@ var minutesArrow = document.getElementById("minutes-arrow");
 var isStart = false;
 var degree = 0;
 
-startStopButton.onclick = () => {
+startPauseButton.onclick = () => {
     if(isStart === false) {
         stopwatch.start();
         isStart = true;
-        startStopButton.classList.add("isStart");
-        startStopButton.innerHTML = "Stop";
+        startPauseButton.classList.add("isStart");
+        startPauseButton.innerHTML = "Pause";
     }else{
         stopwatch.stop();
         isStart = false;
-        startStopButton.classList.remove("isStart");
-        startStopButton.innerHTML = "Start";
+        startPauseButton.classList.remove("isStart");
+        startPauseButton.innerHTML = "Start";
     }
 };
 
-clearButton.onclick = () => stopwatch.clear();
+stopButton.onclick = () => stopwatch.clear();
 
 var laps = new Array();
 lapButton.onclick = () => {
@@ -111,7 +107,3 @@ lapButton.onclick = () => {
     this.rotateMinutesArrow();
 };
 
-
-/*startButton.onclick = function () {
-    stopwatch.start();
-};*/

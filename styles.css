@@ -37,7 +37,7 @@
     margin-bottom: 10px;
 }
 
-.start-stop-button{
+.start-pause-button{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -53,11 +53,11 @@
     margin-right: 10px;
 }
 
-.start-stop-button.isStart{
+.start-pause-button.isStart{
     background-color: #ff5956;
 }
 
-.clear-button{
+.stop-button{
     width: 150px;
     height: 50px;
     background-color: yellow;
