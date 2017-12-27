@@ -45,6 +45,7 @@ class Stopwatch{
         this.getTime();
 
         this.clearSecondsArrow();
+        this.rotateMinutesArrow();
     }
 
 
