@@ -22,8 +22,8 @@ class Stopwatch{
         const go = () => {
             ++this.seconds;
             this.getTime();
-            secondsArrow.style.transform = "rotate("+ degree +"deg)";
             degree = degree + 6;
+            secondsArrow.style.transform = "rotate("+ degree +"deg)";
 
             if(this.seconds === 60){
                 ++this.minutes;
@@ -42,6 +42,9 @@ class Stopwatch{
         this.seconds = 0;
         this.minutes = 0;
         this.getTime();
+
+        degree = 0;
+        secondsArrow.style.transform = "rotate(" + degree + "deg)";
     }
 
 
@@ -62,7 +65,7 @@ var secondsArrow = document.getElementById("seconds-arrow");
 
 
 var isStart = false;
-var degree = 6;
+var degree = 0;
 startStopButton.onclick = () => {
     /*setInterval(function () {
         arrow.style.transform = "rotate("+ degree +"deg)";
