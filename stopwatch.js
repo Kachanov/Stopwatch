@@ -26,13 +26,15 @@ class Stopwatch{
 
             if(this.seconds === 60){
                 ++this.minutes;
+                this.rotateMinutesArrow();
+
                 minutes.innerHTML = this.minutes;
                 this.seconds = "0" + 0;
                 seconds.innerHTML = this.seconds;
             }
         };
 
-        timerID = setInterval(go, 1000);
+        timerID = setInterval(go, 100);
         go();
     };
 
@@ -52,16 +54,23 @@ class Stopwatch{
 
 
     rotateSecondsArrow(){
-        degree = degree + 6;
-        secondsArrow.style.transform = "rotate(" + degree + "deg)";
+        //degree = degree + 6;
+        secondsArrow.style.transform = "rotate(" + this.seconds * 6 + "deg)";
     }
 
 
     clearSecondsArrow(){
         degree = 0;
-        secondsArrow.style.transform = "rotate(" + degree + "deg)";
+        this.rotateSecondsArrow();
     }
 
+    rotateMinutesArrow(){
+        minutesArrow.style.transform = "rotate(" + this.minutes * 6 + "deg)";
+    }
+
+    clearMinutesArrow(){
+
+    }
 }
 
 var stopwatch = new Stopwatch(0, 0);
@@ -72,6 +81,7 @@ var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
 var lapButton = document.getElementById("lap-button");
 var secondsArrow = document.getElementById("seconds-arrow");
+var minutesArrow = document.getElementById("minutes-arrow");
 
 
 var isStart = false;
@@ -97,6 +107,7 @@ var laps = new Array();
 lapButton.onclick = () => {
     laps.push(stopwatch.minutes + ":" + stopwatch.seconds);
     console.log(laps);
+    this.rotateMinutesArrow();
 };
 
 
