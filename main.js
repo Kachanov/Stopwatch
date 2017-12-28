@@ -29,10 +29,10 @@ stopButton.onclick = () => {
     isStart = false;
     startPauseButton.classList.remove("isStart");
     startPauseButton.innerHTML = "Start";
+
     stopwatch.stop();
     laps = [];
     lapsCart.innerHTML = "";
-
 };
 
 
@@ -41,6 +41,7 @@ var laps = new Array();
 lapButton.onclick = function() {
     laps.push(stopwatch.minutes + ":" + stopwatch.seconds);
     console.log(laps);
+
     var newLap = document.createElement("div");
     if(laps.length > 5){
         lapsCart.lastElementChild.innerHTML = laps[laps.length - 1];

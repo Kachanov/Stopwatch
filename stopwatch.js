@@ -10,7 +10,6 @@ class Stopwatch{
 
 
     getTime() {
-        console.log(this.minutes, this.seconds);
         seconds.innerHTML = this.seconds;
         minutes.innerHTML = this.minutes;
 
@@ -51,7 +50,6 @@ class Stopwatch{
     pause(){
         clearInterval(timerID);
         pauseTime = +timer;
-        console.log(pauseTime);
     }
 
 
