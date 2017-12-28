@@ -1,4 +1,6 @@
 var timerID;
+var startTime, currentTime, timer;
+var pauseTime = 0;
 class Stopwatch{
 
     constructor(minutes, seconds){
@@ -19,18 +21,16 @@ class Stopwatch{
 
 
     start(){
+        startTime = Date.now();
         const go = () => {
-            currentTime = new Date();
-            var newDate = new Date(currentTime - startTime);
-            this.seconds = newDate.getSeconds();
-            this.minutes = newDate.getMinutes();
+            currentTime = Date.now();
+            timer = new Date(currentTime + pauseTime - startTime);
+            this.seconds = timer.getSeconds();
+            this.minutes = timer.getMinutes();
             this.getTime();
 
             this.rotateSecondsArrow();
             this.rotateMinutesArrow();
-
-            this.getTime();
-
         };
 
         timerID = setInterval(go, 1000);
@@ -38,7 +38,7 @@ class Stopwatch{
     };
 
 
-    clear(){
+    stop(){
         this.seconds = 0;
         this.minutes = 0;
         this.getTime();
@@ -48,8 +48,10 @@ class Stopwatch{
     }
 
 
-    stop(){
+    pause(){
         clearInterval(timerID);
+        pauseTime = +timer;
+        console.log(pauseTime);
     }
 
 
@@ -68,4 +70,4 @@ class Stopwatch{
 
 }
 
-var stopwatch = new Stopwatch();
+var stopwatch = new Stopwatch(0, 0);
