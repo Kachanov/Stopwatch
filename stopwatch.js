@@ -21,7 +21,6 @@ class Stopwatch{
 
 
     start(){
-
         const go = () => {
             currentTime = Date.now();
             timer = new Date(currentTime + pauseTime - startTime);
