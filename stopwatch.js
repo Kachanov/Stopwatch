@@ -1,6 +1,12 @@
 var timerID;
 var startTime, currentTime, timer;
+<<<<<<< Updated upstream
 var pauseTime = 0;
+=======
+var stopTime;
+var started = false;
+
+>>>>>>> Stashed changes
 class Stopwatch{
 
     constructor(minutes, seconds){
@@ -20,10 +26,24 @@ class Stopwatch{
 
 
     start(){
+
         const go = () => {
+<<<<<<< Updated upstream
             currentTime = Date.now();
             timer = new Date(currentTime + pauseTime - startTime);
             this.seconds = timer.getSeconds();
+=======
+            currentTime = new Date();
+            if(started === false) {
+                startTime = new Date();
+                started = true;
+            }else{
+                startTime = stopTime;
+            }
+            timer = new Date(currentTime - startTime);
+
+            this.seconds = timer.getSeconds()
+>>>>>>> Stashed changes
             this.minutes = timer.getMinutes();
             this.getTime();
 
@@ -33,6 +53,7 @@ class Stopwatch{
 
         timerID = setInterval(go, 1000);
         go();
+
     };
 
 
@@ -47,7 +68,12 @@ class Stopwatch{
     }
 
 
+<<<<<<< Updated upstream
     pause(){
+=======
+    stop(){
+        stopTime = new Date();
+>>>>>>> Stashed changes
         clearInterval(timerID);
         pauseTime = +timer;
     }

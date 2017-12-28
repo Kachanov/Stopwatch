@@ -10,7 +10,10 @@ var lapsCart = document.getElementById("laps");
 var isStart = false;
 
 startPauseButton.onclick = () => {
+<<<<<<< Updated upstream
     startTime = Date.now();
+=======
+>>>>>>> Stashed changes
     if(isStart === false) {
         stopwatch.start();
         isStart = true;
