@@ -21,7 +21,7 @@ class Stopwatch{
 
 
     start(){
-        startTime = Date.now();
+
         const go = () => {
             currentTime = Date.now();
             timer = new Date(currentTime + pauseTime - startTime);
@@ -41,9 +41,10 @@ class Stopwatch{
     stop(){
         this.seconds = 0;
         this.minutes = 0;
+        pauseTime = 0;
         this.getTime();
 
-        this.clearSecondsArrow();
+        this.rotateSecondsArrow();
         this.rotateMinutesArrow();
     }
 
@@ -57,11 +58,6 @@ class Stopwatch{
 
     rotateSecondsArrow(){
         secondsArrow.style.transform = "rotate(" + this.seconds * 6 + "deg)";
-    }
-
-
-    clearSecondsArrow(){
-        this.rotateSecondsArrow();
     }
 
     rotateMinutesArrow(){

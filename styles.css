@@ -54,13 +54,13 @@
 }
 
 .start-pause-button.isStart{
-    background-color: #ff5956;
+    background-color: #fff100;
 }
 
 .stop-button{
     width: 150px;
     height: 50px;
-    background-color: yellow;
+    background-color: red;
     text-align: center;
     font-size: 24pt;
     border: 2px solid black;

@@ -9,6 +9,7 @@ var minutesArrow = document.getElementById("minutes-arrow");
 var isStart = false;
 
 startPauseButton.onclick = () => {
+    startTime = Date.now();
     if(isStart === false) {
         stopwatch.start();
         isStart = true;
@@ -23,6 +24,10 @@ startPauseButton.onclick = () => {
 };
 
 stopButton.onclick = () => {
+    stopwatch.pause();
+    isStart = false;
+    startPauseButton.classList.remove("isStart");
+    startPauseButton.innerHTML = "Start";
     stopwatch.stop();
 };
 
