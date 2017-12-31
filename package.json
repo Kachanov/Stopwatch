@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Kachanov/Stopwatch#readme",
   "dependencies": {
     "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
   }
 }
