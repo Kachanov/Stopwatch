@@ -2,6 +2,7 @@ import _ from "lodash";
 import {Stopwatch} from "./stopwatch.js";
 import {startTime, currentTime, timer, timerID, pauseTime, stopwatch} from "./stopwatch";
 export {minutes, seconds, minutesArrow, secondsArrow};
+import "./styles.css";
 
 
 var startPauseButton = document.getElementById("start-pause-button");
