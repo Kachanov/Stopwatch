@@ -7,3 +7,13 @@
 =============
 
 [Demonstration](http://jsfiddle.net/v5b50531/embedded/result/)
+
+**Installation**
+=============
+*Download* project from this git repository, *unzip*, *go into project directory* and *run* follow command.
+
+```shell
+webpack-dev-server
+```
+
+Open browser and type 

@@ -7,8 +7,9 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
+
     devServer: {
         host: "localhost",
-        port: 8080
+        port: 8080,
     }
 };
