@@ -10,10 +10,13 @@
 
 **Installation**
 =============
-*Download* project from this git repository, *unzip*, *go into project directory* and *run* follow command.
+*Download* project from this git repository, *unzip*, *go into project directory* and *run* follow command:
 
 ```shell
-webpack-dev-server
+npm start
 ```
 
-Open browser and type 
+*Go to* page:
+```
+localhost:8080/dist/index.html
+```
