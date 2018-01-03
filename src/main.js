@@ -4,6 +4,15 @@ import {startTime, currentTime, timer, timerID, pauseTime, stopwatch} from "./st
 export {minutes, seconds, minutesArrow, secondsArrow};
 import "./styles.css";
 
+import clockFace from "./clockface.png";
+import secArrow from "./seconds-arrow.png";
+import minArrow from "./minutes-arrow.png";
+var myClockFace = new Image();
+myClockFace.src = clockFace;
+var mySecArrow = new Image();
+mySecArrow.src = secArrow;
+var myMinArrow = new Image();
+myMinArrow.src = minArrow;
 
 var startPauseButton = document.getElementById("start-pause-button");
 var stopButton = document.getElementById("stop-button");
@@ -13,8 +22,16 @@ var lapButton = document.getElementById("lap-button");
 var secondsArrow = document.getElementById("seconds-arrow");
 var minutesArrow = document.getElementById("minutes-arrow");
 var lapsCart = document.getElementById("laps");
+var clock_face = document.getElementById("clock_face");
 
 var isStart = false;
+
+
+
+clock_face.appendChild(myClockFace);
+secondsArrow.appendChild(mySecArrow);
+minutesArrow.appendChild(myMinArrow);
+
 
 startPauseButton.onclick = () => {
     if(isStart === false) {
