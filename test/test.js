@@ -1,8 +1,8 @@
 var assert = require("assert");
-/*
-import {Stopwatch} from "../src/stopwatch";
+
+/*import {Stopwatch} from "../src/stopwatch";
 import {startTime, currentTime, timer, timerID, pauseTime, stopwatch} from "../src/stopwatch";
-import {minutes, seconds, minutesArrow, secondsArrow} from "../src/main";*/
+import {minutes, seconds, minutesArrowPlace, secondsArrowPlace} from "../src/main";*/
 
 describe("array", function () {
     describe("#indexOf()", function () {

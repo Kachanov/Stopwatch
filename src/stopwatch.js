@@ -1,7 +1,8 @@
 var timerID;
 var startTime, currentTime, timer;
 var pauseTime = 0;
-import {minutes, seconds, secondsArrow, minutesArrow} from "./main";
+import {startPauseButton,stopButton,minutes, seconds, lapButton, secondsArrowPlace, minutesArrowPlace, lapsCart, clockFacePlace, secondsArrow, minutesArrow} from "../src/UI";
+//export {stopwatch};
 
 export class Stopwatch{
 
@@ -66,4 +67,3 @@ export class Stopwatch{
 
 }
 
-export var stopwatch = new Stopwatch(0, 0);
