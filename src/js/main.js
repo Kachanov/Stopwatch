@@ -1,9 +1,9 @@
 import {Stopwatch} from "./stopwatch";
 import {startPauseButton,stopButton, lapButton, lapsCart} from "./UI";
 
-var stopwatch = new Stopwatch(0, 0);
+let stopwatch = new Stopwatch(0, 0);
 
-var isStart = false;
+let isStart = false;
 startPauseButton.onclick = () => {
     if(isStart === false) {
         stopwatch.start();
@@ -25,23 +25,12 @@ stopButton.onclick = () => {
     startPauseButton.innerHTML = "Start";
 
     stopwatch.stop();
-    laps = [];
+    stopwatch.clearLaps();
     lapsCart.innerHTML = "";
 };
 
 
 
-var laps = new Array();
 lapButton.onclick = function() {
-    laps.push(stopwatch.minutes + ":" + stopwatch.seconds);
-    console.log(laps);
-
-    var newLap = document.createElement("div");
-    if(laps.length > 5){
-        lapsCart.lastElementChild.innerHTML = laps[laps.length - 1];
-    }else{
-        newLap.innerHTML = "" + laps[laps.length - 1] + "";
-        newLap.style.textAlign = "center";
-        lapsCart.appendChild(newLap);
-    }
+    stopwatch.pushLaps();
 };

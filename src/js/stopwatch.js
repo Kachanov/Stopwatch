@@ -1,13 +1,16 @@
-var timerID;
-var startTime, currentTime, timer;
-var pauseTime = 0;
-import {minutes, seconds, secondsArrow, minutesArrow} from "./UI";
+let timerID;
+let startTime, currentTime, timer;
+let pauseTime = 0;
+
+import {minutes, seconds, secondsArrow, minutesArrow, lapsCart} from "./UI";
+
 
 export class Stopwatch{
 
     constructor(minutes, seconds){
         this.seconds = seconds;
         this.minutes = minutes;
+        this.laps = [];
     }
 
 
@@ -63,6 +66,24 @@ export class Stopwatch{
     rotateMinutesArrow(){
         minutesArrow.style.transform = "rotate(" + this.minutes * 6 + "deg)";
     }
+
+    pushLaps(){
+        this.laps.push(this.minutes + ":" + this.seconds);
+
+        let newLap = document.createElement("div");
+        if(this.laps.length > 5){
+            lapsCart.lastElementChild.innerHTML = this.laps[this.laps.length - 1];
+        }else{
+            newLap.innerHTML = "" + this.laps[this.laps.length - 1] + "";
+            newLap.style.textAlign = "center";
+            lapsCart.appendChild(newLap);
+        }
+    }
+
+    clearLaps(){
+        this.laps = [];
+    }
+
 
 }
 
