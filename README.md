@@ -18,5 +18,5 @@ npm start
 
 *Go to* page:
 ```
-localhost:8080/dist/index.html
+localhost:8080
 ```
