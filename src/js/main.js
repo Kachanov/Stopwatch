@@ -1,5 +1,5 @@
 import {Stopwatch} from "./stopwatch";
-import {startPauseButton,stopButton, lapButton, lapsCart} from "../src/UI";
+import {startPauseButton,stopButton, lapButton, lapsCart} from "./UI";
 
 var stopwatch = new Stopwatch(0, 0);
 

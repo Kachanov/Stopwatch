@@ -1,7 +1,7 @@
-import "../src/styles.css";
-import clock_face from "../src/clockface.png";
-import seconds_arrow from "../src/seconds-arrow.png";
-import minutes_arrow from "../src/minutes-arrow.png";
+import "../styles/styles.css";
+import clock_face from "../images/clockface.png";
+import seconds_arrow from "../images/seconds-arrow.png";
+import minutes_arrow from "../images/minutes-arrow.png";
 
 export {startPauseButton,stopButton,minutes, seconds, lapButton, secondsArrowPlace, minutesArrowPlace, lapsCart, clockFacePlace, secondsArrow, minutesArrow};
 export {clockFace};
