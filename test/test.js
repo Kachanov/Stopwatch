@@ -1,3 +1,5 @@
+import {Stopwatch} from "../src/js/stopwatch";
+/*var Stopwatch = require("../src/js/stopwatch");*/
 var assert = require("assert");
 
 /*import {Stopwatch} from "../src/stopwatch";
@@ -12,3 +14,8 @@ describe("array", function () {
     });
 });
 
+describe("123", function () {
+    it('should ', function () {
+        assert.equal(typeof new Stopwatch(0, 0), "object");
+    });
+});
