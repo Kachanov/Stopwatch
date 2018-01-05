@@ -1,12 +1,19 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 .stopwatch{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
 
-    width: 800px;
-    height: 600px;
-    background-color: #dedede;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a080b;
 }
 
 .time{
@@ -16,11 +23,13 @@
 
     width: 450px;
     height: 50px;
-    background-color: azure;
+    background-color: #6c2125;
     font-size: 24pt;
     border: 2px solid black;
+    border-radius: 10px;
     text-align: center;
     margin-top: 20px;
+    color: #ff0d2f;
 }
 
 .navigation{
@@ -51,6 +60,8 @@
     cursor: pointer;
     user-select: none;
     margin-right: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 .start-pause-button.isStart{
@@ -66,6 +77,8 @@
     border: 2px solid black;
     cursor: pointer;
     user-select: none;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 .lap-button{
@@ -78,6 +91,14 @@
     cursor: pointer;
     user-select: none;
     margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.information{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .clock_face{
@@ -88,7 +109,7 @@
     background: url("../images/clockface.png") no-repeat;
     width: 300px;
     height: 300px;
-    margin-left: 250px;
+   /* margin-left: 39%;*/
 }
 
 .seconds-arrow{
@@ -115,7 +136,11 @@
     flex-direction: column;
     justify-content: flex-start;
     border: 2px solid black;
+    border-radius: 10px;
     width: 200px;
-    height: 90px;
-    background-color: azure;
+    height: 160px;
+    background-color: #6c2125;
+    margin-top: 20px;
+    color: #ff0d2f;
+    font-size: 20pt;
 }
