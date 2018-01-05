@@ -6,7 +6,7 @@
 **Try it now!**
 =============
 
-[Demonstration](http://jsfiddle.net/v5b50531/embedded/result/)
+[Demonstration](http://jsfiddle.net/Kachanov_B/ymygk9z6/embedded/result/)
 
 **Installation**
 =============
