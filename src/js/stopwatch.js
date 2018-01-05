@@ -68,15 +68,21 @@ export class Stopwatch{
     }
 
     pushLaps(){
-        this.laps.push(this.minutes + ":" + this.seconds);
+        if(this.seconds !== 0 || this.minutes !== 0) {
+            if(this.seconds < 10){
+                this.laps.push(this.minutes + ":0" + this.seconds);
+            }else{
+                this.laps.push(this.minutes + ":" + this.seconds);
+            }
 
-        let newLap = document.createElement("div");
-        if(this.laps.length > 5){
-            lapsCart.lastElementChild.innerHTML = this.laps[this.laps.length - 1];
-        }else{
-            newLap.innerHTML = "" + this.laps[this.laps.length - 1] + "";
-            newLap.style.textAlign = "center";
-            lapsCart.appendChild(newLap);
+            let newLap = document.createElement("div");
+            if (this.laps.length > 5) {
+                lapsCart.lastElementChild.innerHTML = this.laps[this.laps.length - 1];
+            } else {
+                newLap.innerHTML = "" + this.laps[this.laps.length - 1] + "";
+                newLap.style.textAlign = "center";
+                lapsCart.appendChild(newLap);
+            }
         }
     }
 

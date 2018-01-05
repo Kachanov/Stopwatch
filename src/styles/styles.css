@@ -93,22 +93,20 @@
 
 .seconds-arrow{
     position: absolute;
-    margin-top: 75px;
+    margin-top: 72px;
     z-index: 3;
     background: url("../images/seconds-arrow.png") no-repeat;
     height: 150px;
     width: 12px;
-    margin-left: 1px;
 }
 
 .minutes-arrow{
     position: absolute;
-    margin-top: 75px;
+    margin-top: 68px;
     z-index: 2;
     background: url("../images/minutes-arrow.png") no-repeat;
     height: 150px;
     width: 12px;
-    margin-right: 5px;
 }
 
 .laps{
