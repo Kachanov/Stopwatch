@@ -85,18 +85,30 @@
     flex-direction: row;
     justify-content: center;
     z-index: 1;
+    background: url("../images/clockface.png") no-repeat;
+    width: 300px;
+    height: 300px;
+    margin-left: 250px;
 }
 
 .seconds-arrow{
     position: absolute;
-    margin-top: 72px;
+    margin-top: 75px;
     z-index: 3;
+    background: url("../images/seconds-arrow.png") no-repeat;
+    height: 150px;
+    width: 12px;
+    margin-left: 1px;
 }
 
 .minutes-arrow{
     position: absolute;
-    margin-top: 70px;
+    margin-top: 75px;
     z-index: 2;
+    background: url("../images/minutes-arrow.png") no-repeat;
+    height: 150px;
+    width: 12px;
+    margin-right: 5px;
 }
 
 .laps{
