@@ -14,8 +14,8 @@ describe("array", function () {
     });
 });
 
-describe("123", function () {
-    it('should ', function () {
+describe("stopwatch_object", function () {
+    it('new Stopwatch() should return new object ', function () {
         assert.equal(typeof new Stopwatch(0, 0), "object");
     });
 });
