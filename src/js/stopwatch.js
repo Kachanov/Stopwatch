@@ -14,14 +14,24 @@ export class Stopwatch{
     }
 
 
-    getTime() {
-        seconds.innerHTML = this.seconds;
-        minutes.innerHTML = this.minutes;
-
-        if(this.seconds < 10){
-            seconds.innerHTML = "0" + this.seconds;
+    showTime() {
+        if(this.getSeconds() < 10){
+            seconds.innerHTML = "0" + this.getSeconds();
+        }else{
+            seconds.innerHTML = this.getSeconds();
         }
+
+        minutes.innerHTML = this.getMinutes();
     }
+
+    getSeconds(){
+        return this.seconds;
+    }
+
+    getMinutes(){
+        return this.minutes;
+    }
+
 
 
     start(){
@@ -31,7 +41,7 @@ export class Stopwatch{
             timer = new Date(currentTime + pauseTime - startTime);
             this.seconds = timer.getSeconds();
             this.minutes = timer.getMinutes();
-            this.getTime();
+            this.showTime();
 
             this.rotateSecondsArrow();
             this.rotateMinutesArrow();
@@ -46,7 +56,7 @@ export class Stopwatch{
         this.seconds = 0;
         this.minutes = 0;
         pauseTime = 0;
-        this.getTime();
+        this.showTime();
 
         this.rotateSecondsArrow();
         this.rotateMinutesArrow();

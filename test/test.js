@@ -1,6 +1,8 @@
 import {Stopwatch} from "../src/js/stopwatch";
-/*var Stopwatch = require("../src/js/stopwatch");*/
+import {stopwatch} from "../src/js/main";
+
 var assert = require("assert");
+
 
 /*import {Stopwatch} from "../src/stopwatch";
 import {startTime, currentTime, timer, timerID, pauseTime, stopwatch} from "../src/stopwatch";
@@ -15,7 +17,18 @@ describe("array", function () {
 });
 
 describe("stopwatch_object", function () {
-    it('new Stopwatch() should return new object ', function () {
-        assert.equal(typeof new Stopwatch(0, 0), "object");
+
+    describe("#new Stopwatch(0, 0)", function () {
+       it("should return new object", function () {
+           assert.equal(typeof new Stopwatch(0, 0), "object");
+       });
     });
+
+    describe("#stopwatch.showSeconds() and stopwatch.showMinutes()", function () {
+        it("should return stopwatch`s current time", function () {
+            assert.equal(stopwatch.getSeconds(), stopwatch.seconds);
+            assert.equal(stopwatch.getMinutes(), stopwatch.minutes);
+        });
+    });
+
 });

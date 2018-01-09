@@ -1,6 +1,6 @@
 import "../styles/styles.css";
 
-export {startPauseButton,stopButton,minutes, seconds, lapButton, lapsCart, secondsArrow, minutesArrow};
+export {startPauseButton, stopButton, minutes, seconds, lapButton, lapsCart, secondsArrow, minutesArrow};
 
 
 let startPauseButton = document.getElementById("start-pause-button");
