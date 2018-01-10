@@ -1,0 +1,146 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.stopwatch{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a080b;
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 450px;
+    height: 50px;
+    background-color: #6c2125;
+    font-size: 24pt;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    color: #ff0d2f;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.display{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.start-pause-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 150px;
+    height: 50px;
+    background-color: greenyellow;
+    text-align: center;
+    font-size: 24pt;
+    border: 2px solid black;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.start-pause-button.isStart{
+    background-color: #fff100;
+}
+
+.stop-button{
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    text-align: center;
+    font-size: 24pt;
+    border: 2px solid black;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.lap-button{
+    width: 150px;
+    height: 50px;
+    background-color: #6061ff;
+    text-align: center;
+    font-size: 24pt;
+    border: 2px solid black;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.information{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.clock_face{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 1;
+    background: url("../images/clockface.png") no-repeat;
+    width: 300px;
+    height: 300px;
+   /* margin-left: 39%;*/
+}
+
+.seconds-arrow{
+    position: absolute;
+    margin-top: 72px;
+    z-index: 3;
+    background: url("../images/seconds-arrow.png") no-repeat;
+    height: 150px;
+    width: 12px;
+}
+
+.minutes-arrow{
+    position: absolute;
+    margin-top: 68px;
+    z-index: 2;
+    background: url("../images/minutes-arrow.png") no-repeat;
+    height: 150px;
+    width: 12px;
+}
+
+.laps{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 160px;
+    background-color: #6c2125;
+    margin-top: 20px;
+    color: #ff0d2f;
+    font-size: 20pt;
+}
